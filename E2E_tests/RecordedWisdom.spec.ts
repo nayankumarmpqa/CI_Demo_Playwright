@@ -2,6 +2,10 @@ import { test, expect } from '@playwright/test';
 
 test('Wisdomtest', async ({ page }) => {
   await page.goto('https://wh-wisdom-staging.herokuapp.com/app/');
+
+  await expect(page).toHaveURL('https://wh-wisdom-staging.herokuapp.com/app/');
+  await expect(page).toHaveTitle('Wisdom Panel™');
+
  // await page.getByRole('textbox', { name: 'Email' }).click();
   await page.getByRole('textbox', { name: 'Email' }).fill('coco@wisdompanel.com');
   await page.getByRole('button', { name: 'Next' }).click();
@@ -29,6 +33,8 @@ test('Wisdomtest', async ({ page }) => {
   
   await expect(page.getByRole('heading', { name: 'Welcome back.' })).toBeVisible();
   await expect(page.locator('body')).toContainText('New to Wisdom Panel? Activate your kit');
+
+  await page.close();
 
 
 });
