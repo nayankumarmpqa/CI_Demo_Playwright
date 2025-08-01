@@ -4,7 +4,7 @@ test('Wisdomtest', async ({ page }) => {
   await page.goto('https://wh-wisdom-staging.herokuapp.com/app/');
 
   await expect(page).toHaveURL('https://wh-wisdom-staging.herokuapp.com/app/');
-  await expect(page).toHaveTitle('Wisdom Panel™');
+  await expect(page).toHaveTitle('Sign in to your account | Wisdom Panel™ pet DNA tests');
 
  // await page.getByRole('textbox', { name: 'Email' }).click();
   await page.getByRole('textbox', { name: 'Email' }).fill('coco@wisdompanel.com');
