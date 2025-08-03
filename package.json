@@ -6,8 +6,8 @@
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
-    "clean": "rm -rf playwright-report test-results .playwright",
-    "clean:win": "rd /s /q playwright-report && rd /s /q test-results && rd /s /q .playwright"
+    "clean": "node clean.js",
+    "clean:win": "if exist playwright-report rd /s /q playwright-report && if exist test-results rd /s /q test-results && if exist .playwright rd /s /q .playwright"
   },
   "keywords": [],
   "author": "",
