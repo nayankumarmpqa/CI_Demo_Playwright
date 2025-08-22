@@ -35,6 +35,4 @@ test('Wisdomtest', async ({ page }) => {
   await expect(page.locator('body')).toContainText('New to Wisdom Panel? Activate your kit');
 
   await page.close();
-
-
 });
